@@ -2,9 +2,10 @@
   "name": "safeobj",
   "version": "1.0.0",
   "description": "Safe object property access using Proxies",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel modules -d lib --ignore .test.js"
   },
   "author": "Gidi Meir Morris <gidi@gidi.io> (http://www.gidi.io)",
   "license": "MIT",
