@@ -1,4 +1,4 @@
-import safe, { either, Undefined } from './index'
+import safe, { either, Undefined, isUndefined } from './index'
 
 describe('safe', function () {
   it('should make access to unknown properties safe', () => {
@@ -43,6 +43,12 @@ describe('Undefined', function () {
     expect(Undefined.asd).toBe(Undefined)
     expect(Undefined.asd.dfg).toBe(Undefined)
     expect(Undefined.asd.dfg.zxxcv).toBe(Undefined)
+  })
+
+  it('has an isUndefined method which checks its argument to see if it is the Undefined constant', () => {
+    expect(isUndefined(Undefined)).toBeTruthy()
+    expect(isUndefined(undefined)).toBeFalsy()
+    expect(isUndefined({})).toBeFalsy()
   })
 })
 

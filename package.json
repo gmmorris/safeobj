@@ -1,6 +1,6 @@
 {
   "name": "safeobj",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safe object property access using Proxies",
   "main": "lib/index.js",
   "scripts": {

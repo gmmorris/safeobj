@@ -2,10 +2,12 @@ const isObject = obj => obj && typeof obj === 'object'
 const hasKey = (obj, key) => key in obj
 
 export const Undefined = new Proxy({}, {
-    get: function(target, name){
-        return Undefined;
-    }
-  })
+  get: function(target, name){
+      return Undefined;
+  }
+})
+
+export const isUndefined = obj => (obj === Undefined)
 
 export const either = (val,fallback) => (val === Undefined? fallback : val)
 
