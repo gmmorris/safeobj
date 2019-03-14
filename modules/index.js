@@ -1,5 +1,6 @@
-const isObject = obj => obj && typeof obj === 'object'
+const isObject = obj => typeof obj === 'object'
 const hasKey = (obj, key) => key in obj
+const isNullOrUndefined = obj => obj === null || obj === undefined
 
 export const Undefined = new Proxy({}, {
   get: function(target, name){
@@ -17,7 +18,7 @@ const returnPropertyOnObject = (target, name) =>
 function safe (obj) {
   return new Proxy(obj, {
     get: (target, name) =>
-      hasKey(target, name)
+      hasKey(target, name) && !isNullOrUndefined(target[name])
       ? returnPropertyOnObject(target, name)
       : Undefined
   });

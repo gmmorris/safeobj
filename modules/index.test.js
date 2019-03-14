@@ -36,6 +36,18 @@ describe('safe', function () {
 
     expect(getFatherName(safeDarthVader)).toBe(Undefined)
   })
+
+  it('should return Undefined when an defined property with null or undefined value is encountered', () => {
+    const safeDarthVader = safe({
+      name : undefined,
+      mother : null
+    })
+
+    expect(safeDarthVader.name).toBe(Undefined)
+    expect(safeDarthVader.name.asd).toBe(Undefined)
+    expect(safeDarthVader.mother).toBe(Undefined)
+    expect(safeDarthVader.mother.asd).toBe(Undefined)
+  })
 })
 
 describe('Undefined', function () {
