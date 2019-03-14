@@ -7,8 +7,6 @@ export const Undefined = new Proxy({}, {
   }
 })
 
-export const isUndefined = obj => (obj === Undefined)
-
 export const either = (val,fallback) => (val === Undefined? fallback : val)
 
 const returnPropertyOnObject = (target, name) =>

@@ -44,12 +44,6 @@ describe('Undefined', function () {
     expect(Undefined.asd.dfg).toBe(Undefined)
     expect(Undefined.asd.dfg.zxxcv).toBe(Undefined)
   })
-
-  it('has an isUndefined method which checks its argument to see if it is the Undefined constant', () => {
-    expect(isUndefined(Undefined)).toBeTruthy()
-    expect(isUndefined(undefined)).toBeFalsy()
-    expect(isUndefined({})).toBeFalsy()
-  })
 })
 
 describe('either', function () {
