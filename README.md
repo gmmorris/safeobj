@@ -6,6 +6,11 @@ This allows us to achieve a cleaner and safer style of coding.
 
 I'd recommend reading the article to fully understand the incentive.
 
+## Usage in TypeScript
+
+This package contains embedded [TypeScript](https://www.typescriptlang.org/) type definitions.
+TypeScript 2.2.0 or higher is required.
+
 ## API
 
 The API is very simple.
